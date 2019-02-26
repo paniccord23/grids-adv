@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    /* pseudo element for const value */
+      :root {
+        --block-height: 765px;
+      }
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background-color: lightgreen;
+
+      }
+
+      .gridConteiner {
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+        grid-column-gap: 12px;
+
+        /* 100 - ширина отступ с кажд стороны по 40 пикс */
+        width: calc(100vw - 80px);
+        /* var the word for const value */
+        height: var(--block-height);
+        margin: 0 auto;
+        background-color: lightblue;
+      }
+      div {
+
+      }
+      #img1 {
+        grid-column: 1 / 6;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 12px;
+        margin-top: 300px;
+      }
+      #img1 img {
+        grid-column: 1 / 6;
+        width: 100%;
+      }
+      #img1 figcaption {
+        grid-column: 1 / 4
+      }
+      #img2 {
+        grid-column: 4 / 15;
+      }
+      #img2 img {
+        width: 100px $;
+      }
+      @media (max-width:1280px) {
+        :root {
+          --block-height: 680px;
+        }
+      }
+        .gridConteiner {
+          grid-column-gap: 10px;
+        }
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="gridConteiner">
+      <!-- container for image -->
+      <div id="img1">
+        <img src="astana.png">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </figcaption>
+
+      </div>
+    </section>
+    <section class="gridConteiner">
+      <!-- container for image -->
+      <div id="img2">
+        <img src="kazan.png">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </figcaption>
+
+      </div>
+    </section>
+  </body>
+</html>
