@@ -49,7 +49,15 @@
         grid-column: 4 / 15;
       }
       #img2 img {
-        width: 100px $;
+        width: calc(100% + 40px);
+      }
+      #img3 {
+        margin-top: 100px;
+        grid-column: 1 / 8;
+      }
+      #img3 img {
+        width: calc(100% + 40px);
+        margin-left: -40px;
       }
       @media (max-width:1280px) {
         :root {
@@ -68,7 +76,8 @@
     <section class="gridConteiner">
       <!-- container for image -->
       <div id="img1">
-        <img src="astana.png">
+        <!-- srcset for retina display, resourse retina display set, browser will choose the picture by himself -->
+        <img src="astana.png" srcset="astana@2x.png 2x, astana@3x.png 3x">
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </figcaption>
 
       </div>
@@ -76,6 +85,14 @@
     <section class="gridConteiner">
       <!-- container for image -->
       <div id="img2">
+        <img src="kazan.png">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </figcaption>
+
+      </div>
+    </section>
+    <section class="gridConteiner">
+      <!-- container for image -->
+      <div id="img3">
         <img src="kazan.png">
         <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </figcaption>
 
